@@ -131,14 +131,14 @@ export default function TeacherPollAnalysis() {
   }));
 
   const downloadExcel = () => {
-    const data = participants.map((p, index) => ({
-      Rank: index + 1,
-      Name: p.name,
-      Score: p.score,
-      Correct: p.correct,
-      Wrong: p.wrong,
-      "Time Taken": p.timeTaken,
-    }));
+    // const data = participants.map((p, index) => ({
+    //   Rank: index + 1,
+    //   Name: p.name,
+    //   Score: p.score,
+    //   Correct: p.correct,
+    //   Wrong: p.wrong,
+    //   "Time Taken": p.timeTaken,
+    // }));
     // const ws = XLSX.utils.json_to_sheet(data);
     // const wb = XLSX.utils.book_new();
     // XLSX.utils.book_append_sheet(wb, ws, "Analysis");
