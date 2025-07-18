@@ -3,8 +3,8 @@ import { useParams } from "@tanstack/react-router";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Calendar, Clock4, Users, Crown, Medal, Search, Loader2 } from "lucide-react";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
-import * as XLSX from "xlsx";
-import { saveAs } from "file-saver";
+// import * as XLSX from "xlsx";
+// import { saveAs } from "file-saver";
 import axios from "axios";
 
 const API_URL = import.meta.env.VITE_API_URL;
@@ -139,11 +139,11 @@ export default function TeacherPollAnalysis() {
       Wrong: p.wrong,
       "Time Taken": p.timeTaken,
     }));
-    const ws = XLSX.utils.json_to_sheet(data);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "Analysis");
-    const blob = new Blob([XLSX.write(wb, { bookType: "xlsx", type: "array" })]);
-    saveAs(blob, `${analysisData.name}-analysis.xlsx`);
+    // const ws = XLSX.utils.json_to_sheet(data);
+    // const wb = XLSX.utils.book_new();
+    // XLSX.utils.book_append_sheet(wb, ws, "Analysis");
+    // const blob = new Blob([XLSX.write(wb, { bookType: "xlsx", type: "array" })]);
+    // saveAs(blob, `${analysisData.name}-analysis.xlsx`);
   };
 
   // Format date if it's a string
